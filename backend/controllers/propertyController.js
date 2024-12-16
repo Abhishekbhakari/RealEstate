@@ -1,4 +1,3 @@
-// backend/controllers/propertyController.js
 const Property = require('../models/Property');
 
 // @desc    Get all properties
