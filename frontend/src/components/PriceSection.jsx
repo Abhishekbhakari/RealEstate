@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const PriceSection = ({ prices = [{ type: "1 BHK", price: "₹50 Lakh" }] }) => {
+const PriceSection = ({ prices = [{ type: "1 BHK", price: "₹50 Lakh" },{ type: "1 BHK", price: "₹50 Lakh" }] }) => {
   const navigate = useNavigate();
 
   const handleViewBreakdown = (type) => {
