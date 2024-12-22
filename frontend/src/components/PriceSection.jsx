@@ -1,18 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react'; 
 import { useNavigate } from 'react-router-dom';
+import PopupForm from './PopupForm';
 
 const PriceSection = ({ prices = [
-  { type: "1 BHK", carpetArea:"737 Sq.ft.", price: "₹50 Lakh" },
-  { type: "2 BHK Luxury",carpetArea:"800 Sq.ft.", price: "₹1.77 Cr" },
-  { type: "1 BHK",carpetArea:"737 Sq.ft.", price: "₹50 Lakh" },
-  { type: "1 BHK",carpetArea:"737 Sq.ft.", price: "₹50 Lakh" },
-  { type: "1 BHK",carpetArea:"737 Sq.ft.", price: "₹50 Lakh" },
-  { type: "1 BHK",carpetArea:"737 Sq.ft.", price: "₹50 Lakh" },
+  { type: "1 BHK", carpetArea: "737 Sq.ft.", price: "₹50 Lakh" },
+  { type: "2 BHK Luxury", carpetArea: "800 Sq.ft.", price: "₹1.77 Cr" },
+  { type: "1 BHK", carpetArea: "737 Sq.ft.", price: "₹50 Lakh" },
+  { type: "1 BHK", carpetArea: "737 Sq.ft.", price: "₹50 Lakh" },
+  { type: "1 BHK", carpetArea: "737 Sq.ft.", price: "₹50 Lakh" },
+  { type: "1 BHK", carpetArea: "737 Sq.ft.", price: "₹50 Lakh" },
 ] }) => {
-  const navigate = useNavigate();
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [selectedType, setSelectedType] = useState(null);
 
   const handleViewBreakdown = (type) => {
-    navigate(`/breakdown/${type}`);
+    setSelectedType(type);
+    setPopupOpen(true); // Open the popup immediately when the button is clicked
+  };
+
+  const handleClosePopup = () => {
+    setPopupOpen(false);
+    setSelectedType(null);
   };
 
   return (
@@ -45,6 +53,9 @@ const PriceSection = ({ prices = [
           ))}
         </tbody>
       </table>
+      {popupOpen && (
+        <PopupForm isOpen={popupOpen} onClose={handleClosePopup} type={selectedType} />
+      )}
     </section>
   );
 };

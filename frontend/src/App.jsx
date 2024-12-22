@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import ContactForm from "./components/ContactForm";
 
 const App = () => (
-  <div className="grid grid-cols-4 min-h-screen">
+  <div className="grid grid-cols-1 lg:grid-cols-4 min-h-screen relative">
     <div className="col-span-4 lg:col-span-3">
       <main>
         <Navbar />
@@ -20,6 +20,7 @@ const App = () => (
       </main>
       <Footer />
     </div>
+    {/* ContactForm component now adjusted for grid layout */}
     <ContactForm />
   </div>
 );
