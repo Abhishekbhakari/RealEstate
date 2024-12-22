@@ -5,11 +5,11 @@ const Gallery = ({
     "https://enviragallery.com/wp-content/uploads/2020/02/stephen-leonardi-Al9Cl-b7EFU-unsplash.jpg",
     "https://www.sandp.co.in/images/blogs/the-incredible-9-must-have-apartment-amenities.jpeg",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTDHjYG-8TwEYQ5Q9Kt66gLqN-040NsPkltQ&s",
-    "https://via.placeholder.com/300",
-    "https://via.placeholder.com/400",
-    "https://via.placeholder.com/500",
-    "https://via.placeholder.com/600",
-    "https://via.placeholder.com/700",
+    "https://images.ctfassets.net/n2ifzifcqscw/3QRMlAcJFrYAEAbhziixZW/d4b9aa50215c5ea7a161b8a6b59f1974/hero-real-estate-facts-trends.jpeg",
+    "https://png.pngtree.com/thumb_back/fw800/background/20240614/pngtree-luxury-real-estate-house-property-image_15868457.jpg",
+    "https://www.build-review.com/wp-content/uploads/2020/07/luxury-real-estate.jpg",
+    "https://d1b3667xvzs6rz.cloudfront.net/2024/09/real-estate-property.jpg",
+    "https://prod.rockmedialibrary.com/api/public/content/ff061825fa8e44bf8108de5c786c0062?v=4c4f7c7a",
   ],
 }) => (
   <section className="p-6 bg-gray-100">

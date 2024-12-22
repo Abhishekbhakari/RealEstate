@@ -61,14 +61,47 @@ const HeroSection = ({ offerData }) => {
         ))}
       </Swiper>
 
-     
+      {/* Offer component */}
 
       {offerData && (
-        <div className="absolute top-8 left-8 bg-white p-4 rounded shadow-lg z-10 w-64">
-          <h3 className="text-xl font-bold mb-2">{offerData.title}</h3>
-          <p className="text-gray-600">{offerData.description}</p>
+        <div className="absolute top-8 left-8 bg-gradient-to-br from-green-600 to-blue-800 text-white p-4 rounded-lg shadow-lg z-10 w-72 border border-gray-200">
+          <h3 className="text-lg font-semibold mb-1 uppercase tracking-wide bg-green-800 text-center p-2 rounded">
+            A LIMITED TIME OFFER
+          </h3>
+          <h2 className="text-2xl font-bold mb-1">{offerData.title}</h2>
+          <p className="text-sm font-medium">{offerData.description}</p>
+          <div className="mt-4 space-y-2">
+            <p className="text-sm flex justify-between">
+              <span>Land Parcel</span>
+              <span>{offerData.landParcel}</span>
+            </p>
+            <p className="text-sm flex justify-between">
+              <span>Floors</span>
+              <span>{offerData.floors}</span>
+            </p>
+            <p className="text-sm flex justify-between">
+              <span>Possession</span>
+              <span>{offerData.possession}</span>
+            </p>
+            <p className="text-sm flex justify-between">
+              <span>Ownership</span>
+              <span>{offerData.ownership}</span>
+            </p>
+          </div>
+          <ul className="bg-green-200 text-green-900 rounded-md p-3 mt-4 text-sm space-y-1">
+            {offerData.features.map((feature, index) => (
+              <li key={index} className="flex items-center gap-2">
+                <span className="inline-block w-2 h-2 bg-green-500 rounded-full"></span>
+                {feature}
+              </li>
+            ))}
+          </ul>
+          <p className="mt-4 font-bold text-center text-lg">
+            Luxurious {offerData.configurations} Starts At
+          </p>
+          <p className="text-center text-2xl font-bold">₹ {offerData.price} All Inc</p>
           <button
-            className="mt-4 bg-green-700 text-white px-4 py-2 rounded hover:bg-green-800"
+            className="mt-4 w-full bg-green-800 text-white py-2 rounded hover:bg-green-700"
             onClick={() => handleViewBreakdown(offerData.type)}
           >
             {offerData.buttonText}
@@ -76,8 +109,9 @@ const HeroSection = ({ offerData }) => {
         </div>
       )}
 
+    {/* Form PoupUp */}
+    
       {popupOpen && (
-       
           <PopupForm
             isOpen={popupOpen}
             onClose={handleClosePopup}
