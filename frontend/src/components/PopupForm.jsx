@@ -18,11 +18,11 @@ const PopupForm = ({ isOpen, onClose, type }) => {
   if (!isOpen) return null; 
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[1000]">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[1100]">
       <div className="bg-white rounded-lg p-6 w-full max-w-6xl shadow-lg relative flex flex-col lg:flex-row z-60">
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 z-70"
+          className="absolute top-2 left-2 text-gray-500 hover:text-gray-800 z-70"
         >
           &times;
         </button>

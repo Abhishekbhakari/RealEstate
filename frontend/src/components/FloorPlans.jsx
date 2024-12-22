@@ -18,25 +18,25 @@ const FloorPlans = ({ plans = [
       {/* Buttons to filter plans */}
       <div className="flex justify-center gap-4 mb-6">
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded"
+          className="bg-green-700 text-white px-4 py-2 rounded"
           onClick={() => setFilter('2BHK')}
         >
           2BHK
         </button>
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded"
+          className="bg-green-700 text-white px-4 py-2 rounded"
           onClick={() => setFilter('3BHK')}
         >
           3BHK
         </button>
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded"
+          className="bg-green-700 text-white px-4 py-2 rounded"
           onClick={() => setFilter('4BHK')}
         >
           4BHK
         </button>
         <button
-          className="bg-blue-500 text-white px-4 py-2 rounded"
+          className="bg-green-700 text-white px-4 py-2 rounded"
           onClick={() => setFilter('ALL')}
         >
           ALL

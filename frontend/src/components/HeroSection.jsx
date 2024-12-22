@@ -39,7 +39,7 @@ const HeroSection = ({ offerData }) => {
   };
 
   return (
-    <section className="relative z-[900]">
+    <section className="relative z-[800]">
       <Swiper
         pagination={{ clickable: true }}
         autoplay={{

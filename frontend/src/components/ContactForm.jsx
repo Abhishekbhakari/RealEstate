@@ -39,7 +39,7 @@ const ContactForm = () => {
     };
 
   return (
-    <aside className="hidden lg:block w-1/4 fixed top-0 right-0 h-screen bg-gray-100 shadow-lg z-[900] flex flex-col">
+    <aside className="hidden lg:block w-1/4 fixed top-0 right-0 h-screen bg-gray-100 shadow-lg z-[1000] flex flex-col">
       <h2 className="text-3xl font-bold p-4 text-center bg-green-700 text-white">Contact Us</h2>
       <form onSubmit={handleSubmit} className="flex-grow bg-white p-6">
         <div className="mb-4">
