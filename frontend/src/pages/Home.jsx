@@ -27,7 +27,9 @@ const Home = () => {
     <Gallery />
     <FloorPlans />
     <VideoComponent/>
-    <ContactForm />
+    <div className="contact-form-container">
+      <ContactForm />
+    </div>
     </>
   )
 

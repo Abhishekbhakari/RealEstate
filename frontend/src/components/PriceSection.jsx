@@ -67,7 +67,7 @@ const PriceSection = ({ prices = [
             <p className="text-gray-600 mb-4">Price: {price.price}</p>
             <button
               onClick={() => handleViewBreakdown(price.type)}
-              className="w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+              className="w-full px-4 py-2 bg-green-700 text-white rounded hover:bg-green-800"
             >
               View Breakdown
             </button>

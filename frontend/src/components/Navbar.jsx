@@ -43,7 +43,7 @@ const Navbar = () => {
 
       {/* Slide Drawer for Small Screens */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden">
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-[1000] lg:hidden">
           <div className="bg-white w-3/4 h-full fixed top-0 right-0 p-4">
             <button onClick={toggleMenu} className="text-gray-600 hover:text-gray-800 absolute top-4 right-4">
               <svg
