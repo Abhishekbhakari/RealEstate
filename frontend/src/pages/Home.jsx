@@ -7,6 +7,8 @@ import FloorPlans from '../components/FloorPlans';
 import ContactForm from '../components/ContactForm';
 import PriceSection from '../components/PriceSection';
 import About from './About';
+import VideoComponent from '../components/VideoComponent';
+import Offers from '../components/Offer';
 
 const Home = () => {
   const offerData = {
@@ -19,10 +21,12 @@ const Home = () => {
     <HeroSection offerData={offerData} />
     <About />
     <PriceSection />
-    <Highlights />
-    <Gallery />
+    {/* <Highlights /> */}
+    <Offers/>
     <Amenities />
+    <Gallery />
     <FloorPlans />
+    <VideoComponent/>
     <ContactForm />
     </>
   )

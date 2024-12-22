@@ -17,11 +17,12 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <ContactForm />
       </main>
       <Footer />
+      
     </div>
-    {/* ContactForm component now adjusted for grid layout */}
-    <ContactForm />
+    
   </div>
 );
 

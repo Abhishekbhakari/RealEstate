@@ -12,13 +12,13 @@ const PopupForm = ({ isOpen, onClose, type }) => {
   const onSubmit = (data) => {
     console.log("Form Data:", data);
     reset();
-    onClose(); // Close the popup after submitting the form
+    onClose(); 
   };
 
-  if (!isOpen) return null; // Don't render the popup if it's not open
+  if (!isOpen) return null; 
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-[1000]">
       <div className="bg-white rounded-lg p-6 w-full max-w-6xl shadow-lg relative flex flex-col lg:flex-row z-60">
         <button
           onClick={onClose}
@@ -84,7 +84,7 @@ const PopupForm = ({ isOpen, onClose, type }) => {
         </div>
 
         {/* Content Section (for large screens) */}
-        <div className="flex-1 hidden lg:block bg-cover bg-center rounded-lg p-6" style={{ backgroundImage: `url('https://www.example.com/background.jpg')` }}>
+        <div className="flex-1 hidden lg:block bg-cover bg-center rounded-lg p-6" style={{ backgroundImage: `url('https://www.jll.co.in/images/global/jll-future-vision-real-estate-social-1200x628.jpg')` }}>
           <div className="text-white space-y-6">
             <h3 className="text-2xl font-bold">We Promise</h3>
             <ul className="space-y-2">
