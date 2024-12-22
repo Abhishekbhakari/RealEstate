@@ -1,7 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const PriceSection = ({ prices = [{ type: "1 BHK", price: "₹50 Lakh" },{ type: "1 BHK", price: "₹50 Lakh" }] }) => {
+const PriceSection = ({ prices = [
+  { type: "1 BHK", carpetArea:"737 Sq.ft.", price: "₹50 Lakh" },
+  { type: "2 BHK Luxury",carpetArea:"800 Sq.ft.", price: "₹1.77 Cr" },
+  { type: "1 BHK",carpetArea:"737 Sq.ft.", price: "₹50 Lakh" },
+  { type: "1 BHK",carpetArea:"737 Sq.ft.", price: "₹50 Lakh" },
+  { type: "1 BHK",carpetArea:"737 Sq.ft.", price: "₹50 Lakh" },
+  { type: "1 BHK",carpetArea:"737 Sq.ft.", price: "₹50 Lakh" },
+] }) => {
   const navigate = useNavigate();
 
   const handleViewBreakdown = (type) => {
@@ -15,6 +22,7 @@ const PriceSection = ({ prices = [{ type: "1 BHK", price: "₹50 Lakh" },{ type:
         <thead>
           <tr>
             <th className="p-4 text-left">Type</th>
+            <th className="p-4 text-left">Carpet Area</th>
             <th className="p-4 text-left">Price</th>
             <th className="p-4 text-center">Action</th>
           </tr>
@@ -23,6 +31,7 @@ const PriceSection = ({ prices = [{ type: "1 BHK", price: "₹50 Lakh" },{ type:
           {prices.map((price, index) => (
             <tr key={index} className="border-t">
               <td className="p-4">{price.type}</td>
+              <td className="p-4">{price.carpetArea}</td>
               <td className="p-4">{price.price}</td>
               <td className="p-4 text-center">
                 <button

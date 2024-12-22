@@ -1,8 +1,7 @@
-// src/components/ContactForm/ContactForm.js
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -12,21 +11,21 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('https://api.example.com/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+      const response = await fetch("https://api.example.com/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-      if (!response.ok) throw new Error('Failed to submit form');
-      alert('Form submitted successfully!');
+      if (!response.ok) throw new Error("Failed to submit form");
+      alert("Form submitted successfully!");
     } catch (error) {
       console.error(error);
-      alert('Failed to submit form');
+      alert("Failed to submit form");
     }
   };
 
   return (
-    <aside className="w-1/4 fixed top-0 right-0 h-screen bg-gray-100 shadow-lg z-50 flex flex-col">
+    <aside className="hidden lg:block w-1/4 fixed top-0 right-0 h-screen bg-gray-100 shadow-lg z-50 flex flex-col">
       <h2 className="text-3xl font-bold p-4 text-center bg-yellow-500 text-white">Contact Us</h2>
       <form onSubmit={handleSubmit} className="flex-grow bg-white p-6">
         <div className="mb-4">
