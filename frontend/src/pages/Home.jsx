@@ -9,6 +9,7 @@ import PriceSection from '../components/PriceSection';
 import About from './About';
 import VideoComponent from '../components/VideoComponent';
 import Offers from '../components/Offer';
+import Location from '../components/Location';
 
 const Home = () => {
   const offerData = {
@@ -32,17 +33,33 @@ const Home = () => {
   return(
     <>
     <HeroSection offerData={offerData} />
-    <About />
-    <PriceSection />
-    {/* <Highlights /> */}
-    <Offers/>
-    <Amenities />
-    <Gallery />
-    <FloorPlans />
-    <VideoComponent/>
-    <div className="contact-form-container">
+    <section id="about">
+      <About />
+    </section>
+    <section id="price-section">
+      <PriceSection />
+    </section>
+    <section id="floor-plans">
+      <FloorPlans />
+    </section>
+    <section id="offers">
+      <Offers />
+    </section>
+    <section id="amenities">
+      <Amenities />
+    </section>
+    <section id="gallery">
+      <Gallery />
+    </section>
+    <section id="location">
+      <Location />
+    </section>
+    <section id="video">
+      <VideoComponent />
+    </section>
+    <section id="contact">
       <ContactForm />
-    </div>
+    </section>
     </>
   )
 

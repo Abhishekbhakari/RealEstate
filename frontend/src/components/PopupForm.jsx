@@ -84,8 +84,8 @@ const PopupForm = ({ isOpen, onClose, type }) => {
         </div>
 
         {/* Content Section (for large screens) */}
-        <div className="flex-1 hidden lg:block bg-cover bg-center rounded-lg p-6" style={{ backgroundImage: `url('https://www.jll.co.in/images/global/jll-future-vision-real-estate-social-1200x628.jpg')` }}>
-          <div className="text-white space-y-6">
+        <div className="flex-1 hidden lg:block bg-cover bg-center bg-gray-900 shadow-lg rounded-lg p-6" style={{ backgroundImage: `url('https://www.jll.co.in/images/global/jll-future-vision-real-estate-social-1200x628.jpg')`}}>
+          <div className="text-white shadow-lg space-y-6">
             <h3 className="text-2xl font-bold">We Promise</h3>
             <ul className="space-y-2">
               <li>Instant Call Back - Get a call from our experts</li>

@@ -1,8 +1,10 @@
+import axios from 'axios';
+
 export const fetchPropertyData = async () => {
-    try {
-      const response = await fetch('https://api.example.com/properties');
-      return await response.json();
-    } catch (error) {
-      console.error('Error fetching property data:', error);
-    }
-  };
+  try {
+    const response = await axios.get('http://localhost:5000/api/properties');
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching property data:', error);
+  }
+};
